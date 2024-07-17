@@ -23,3 +23,15 @@ The bloodcells code is inspired by the red bloodcells of the human body. The den
 The Plattform used was Processing, a Plattform for creative output.
 
 This code initializes an array of BloodCell objects, each with random positions, sizes, and velocities. In the draw function, it continuously updates the canvas by clearing it and iterating through each BloodCell, calling their move and display methods. The move method updates the cell's position based on its velocity and repels it from the mouse cursor if within a certain distance. It also wraps the cell around the edges of the canvas. The display method renders the cell with dynamically updated colors based on its position, creating gradient effects.
+
+Blood code (Maurice Michaeler)
+The blood vein code represents the arterys and veins, which supply the body with needed oxygen and nutrients. By pressing the left mouse, the first blood starts growing. The code generates randomly moving blood vessels which grow in different directions, change thickness for a more organic effect and spread out.
+The color changes depending on the veins length and vary in brightness. By pressing the space Button, you can send a heartbeat through the blood vessels to simulate a pulse.
+
+The code was created using Processing, a visual programming language based on java.
+
+The code begins by creating single blood vessels(of the class MovingLines) with an assigned directional vector. The variables "switchAfter" and "positionSwitch" influence the way the directional vector evolves(faster spins etc.).
+The function "plot()" modifies the Position of every single dot position which get saved in an array(along with the size of the dot and the size it gains with every pulse).
+The function "renderVein()" on the other hand generates the actual vein every frame by creating little circles on the generated and saved positions.
+The function "pulsing()" sends a volume of blood through the veins by incrementing a variable and changing the size of the circle at the incremented position of the array.
+The function "pulsingSecond()" does the same thing and is implemented so two pulses can run through the veins at the same time and the other one doesn't get cancelled.
